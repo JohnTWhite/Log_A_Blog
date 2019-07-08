@@ -6,6 +6,9 @@ Make a blog UI
 - Cosomos
 - That cool git thing Darren talked About
 
+## Test driven
+- Figure out e2e framework
+
 ## API
 - CRUD operations for Blog
 
