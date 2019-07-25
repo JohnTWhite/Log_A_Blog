@@ -13,7 +13,8 @@ Make a blog UI
 - CRUD operations for Blog
 
 ## UI
-- Blazor, boom, forget about it
+- Blazor, boom, forget about it 
+- Angular... sigh........
 
 ## Roles and permissions
 - Admin privllages vs user
