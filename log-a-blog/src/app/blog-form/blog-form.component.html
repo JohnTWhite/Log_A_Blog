@@ -2,18 +2,27 @@
 
 <div class="container">
  
-    <form #form="ngForm">
+    <form #form="ngForm" ngNativeValidate>
 
         <div class="form-group">
-            <h3>UserName: </h3>
-            <input id="UserName" name="UserName" type="email" placeholder="user@example.com" ngModel>
+            <h3>Login: </h3>
+            <input id="UserName" name="UserName" type="email" placeholder="user@example.com" [(ngModel)]="BlogForm.userName" 
+                #nameField="ngModel" required >
+            <input id="Password" name="Password" type="password" placeholder="*********" [(ngModel)]="BlogForm.password" 
+                #passwordField="ngModel" required>
         </div>
 
         <div class="form-group">
             <h3>Tell your story</h3>
-            <textarea id="Blog" name="BlogPost" class="form-control" type="text" rows="7" ngModel></textarea>
+            <textarea id="Blog" name="BlogPost" class="form-control" type="text" rows="7" [(ngModel)]="BlogForm.blogPost" maxlength="4096"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary">Save</button>
         </div>
 
     </form>
 
+  <!-- <h3> {{ form.value | json }}</h3>
+    <h3>{{ BlogForm | json }}</h3>-->
 </div>
