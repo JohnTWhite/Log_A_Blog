@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlogFormComponent } from './blog-form/blog-form.component';
+import { GridFormComponent } from './grid-form/grid-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlogFormComponent
+    BlogFormComponent,
+    GridFormComponent
   ],
   imports: [
     BrowserModule,
