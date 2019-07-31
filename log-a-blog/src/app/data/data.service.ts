@@ -10,7 +10,7 @@ export class DataService {
 
   constructor() { }
 
-  getBlogFromUser(BlogForm: BlogForm) : Observable<BlogForm>{
-    return of(BlogForm);
+  getBlogFromUser(blogForm: BlogForm) : Observable<BlogForm>{
+    return of(blogForm);
   }
 }

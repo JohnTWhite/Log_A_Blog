@@ -19,7 +19,7 @@ export class BlogFormComponent implements OnInit {
 
   //The spread operator { ...this}, allows us to maintain orignal state, 
   //useful for something like a user cancels modfying an object. 
-  BlogForm : BlogForm = { ...this.originalBlogForm };
+  blogForm : BlogForm = { ...this.originalBlogForm };
 
   constructor(private dataService : DataService) { }
 
@@ -30,7 +30,7 @@ export class BlogFormComponent implements OnInit {
 
   onSubmit(form : NgModel){
     console.log("on submit: ", form.value);
-    this.dataService.getBlogFromUser(this.BlogForm).subscribe(
+    this.dataService.getBlogFromUser(this.blogForm).subscribe(
       result => console.log("result: ", result),
       error => console.log("error (you suck ;P): ", error)
     );

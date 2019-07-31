@@ -2,34 +2,31 @@
 
 <div class="container">
  
-    <form #form="ngForm" ngNativeValidate>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" ngNativeValidate>
 
         <div class="form-group">
             <h3>Login: </h3>
             <input id="UserName" name="UserName" type="email" placeholder="user@example.com" 
-            [(ngModel)]="BlogForm.userName" 
+            [(ngModel)]="blogForm.userName" 
             (blur)="onBlur(nameField)" 
             #nameField="ngModel"
             required >
             <input id="Password" name="Password" type="password" placeholder="*********" 
-            [(ngModel)]="BlogForm.password" 
+            [(ngModel)]="blogForm.password" 
             (blur)="onBlur(passwordField)"    
             #passwordField="ngModel" 
             required >
-        </div>
-
-        <div class="form-group">
+        
             <h3>Tell your story</h3>
             <textarea id="Blog" name="BlogPost" class="form-control" type="text" rows="7" 
-            [(ngModel)]="BlogForm.blogPost" 
+            [(ngModel)]="blogForm.blogPost" 
             maxlength="4096"></textarea>
-        </div>
-
-        <div class="form-group">
+        
             <button class="btn btn-primary"
             type="submit"
             >Save</button>
-        </div>
+        
+    </div>
 
     </form>
 
