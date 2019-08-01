@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BlogForm } from './blog-form-model';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -8,9 +9,9 @@ import { Observable, of } from 'rxjs';
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  getBlogFromUser(blogForm: BlogForm) : Observable<BlogForm>{
-    return of(blogForm);
+  postBlogFromUser(blogForm: BlogForm) : Observable<any>{
+    return this.httpClient.post('url', blogForm);
   }
 }

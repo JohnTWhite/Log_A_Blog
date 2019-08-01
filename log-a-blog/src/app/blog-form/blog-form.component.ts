@@ -30,7 +30,7 @@ export class BlogFormComponent implements OnInit {
 
   onSubmit(form : NgModel){
     console.log("on submit: ", form.value);
-    this.dataService.getBlogFromUser(this.blogForm).subscribe(
+    this.dataService.postBlogFromUser(this.blogForm).subscribe(
       result => console.log("result: ", result),
       error => console.log("error (you suck ;P): ", error)
     );
