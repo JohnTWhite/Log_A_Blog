@@ -19,6 +19,7 @@ namespace Log_A_Blog_API
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://localhost:5009/")
                 .UseStartup<Startup>();
     }
 }

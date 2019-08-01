@@ -9,9 +9,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+   }
 
   postBlogFromUser(blogForm: BlogForm) : Observable<any>{
-    return this.httpClient.post('url', blogForm);
+    return this.httpClient.post('http://localhost:5009/', blogForm);
   }
 }

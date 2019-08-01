@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MongoDB.Driver;
 
 namespace Log_A_Blog_API
 {
@@ -21,7 +22,9 @@ namespace Log_A_Blog_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IMongoMaker>(s => new MongoMaker());
+            services.AddSingleton<IMongoClient>(s => new MongoClient());
+            services.AddSingleton<IMongoMaker>(s => new MongoMaker(s.GetService<IMongoClient>()));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // In production, the Angular files will be served from this directory
