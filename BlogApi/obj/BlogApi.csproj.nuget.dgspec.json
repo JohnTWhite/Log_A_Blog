@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\captain\\source\\repos\\BlogApi\\BlogApi.csproj": {}
+    "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\captain\\source\\repos\\BlogApi\\BlogApi.csproj": {
+    "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\captain\\source\\repos\\BlogApi\\BlogApi.csproj",
+        "projectUniqueName": "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj",
         "projectName": "BlogApi",
-        "projectPath": "C:\\Users\\captain\\source\\repos\\BlogApi\\BlogApi.csproj",
+        "projectPath": "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj",
         "packagesPath": "C:\\Users\\captain\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\captain\\source\\repos\\BlogApi\\obj\\",
+        "outputPath": "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

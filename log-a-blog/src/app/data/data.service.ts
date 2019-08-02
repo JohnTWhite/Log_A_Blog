@@ -13,6 +13,6 @@ export class DataService {
    }
 
   postBlogFromUser(blogForm: BlogForm) : Observable<any>{
-    return this.httpClient.post('https://localhost:5001/api/bloglog', blogForm);
+    return this.httpClient.post('http://localhost:5001/api/BlogLog/', blogForm);
   }
 }
