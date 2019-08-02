@@ -1,31 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj": {}
+    "C:\\Users\\jwhite\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj": {
+    "C:\\Users\\jwhite\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj",
+        "projectUniqueName": "C:\\Users\\jwhite\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj",
         "projectName": "BlogApi",
-        "projectPath": "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj",
-        "packagesPath": "C:\\Users\\captain\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\captain\\source\\repos\\Log_A_Blog\\BlogApi\\obj\\",
+        "projectPath": "C:\\Users\\jwhite\\source\\repos\\Log_A_Blog\\BlogApi\\BlogApi.csproj",
+        "packagesPath": "C:\\Users\\jwhite\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jwhite\\source\\repos\\Log_A_Blog\\BlogApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\captain\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jwhite\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.1": {
@@ -41,6 +46,10 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -53,6 +62,7 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true

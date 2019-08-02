@@ -23,12 +23,21 @@ namespace BlogApi
         }
 
         public IConfiguration Configuration { get; }
+        private const string _corsPolicyName = "AllowAngularOrigin";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddSingleton<IMongoClient>(s => new MongoClient());
             services.AddSingleton<IMongoMaker>(s => new MongoMaker(s.GetService<IMongoClient>()));
+            services.AddCors(c => {
+                c.AddPolicy(_corsPolicyName, options => options.WithOrigins("http://localhost:4200/")
+                .AllowAnyHeader()
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                );
+                });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -45,6 +54,7 @@ namespace BlogApi
                 app.UseHsts();
             }
 
+            app.UseCors(_corsPolicyName);
             app.UseHttpsRedirection();
             app.UseMvc();
         }

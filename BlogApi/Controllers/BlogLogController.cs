@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using BlogApi.Data;
 using BlogApi.Model;
 using Microsoft.AspNetCore.Http;
+using System.Web.Http.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApi.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200/", headers: "*", methods: "*")]
     [Route("api/[controller]")]
     [ApiController]
     public class BlogLogController : ControllerBase
